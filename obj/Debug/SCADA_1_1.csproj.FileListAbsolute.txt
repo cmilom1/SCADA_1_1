@@ -1,0 +1,15 @@
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\bin\Debug\SCADA_1_1.exe.config
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\bin\Debug\SCADA_1_1.exe
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\bin\Debug\SCADA_1_1.pdb
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.csproj.AssemblyReference.cache
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.MainPanel.resources
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.Properties.Resources.resources
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.csproj.GenerateResource.cache
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.csproj.CoreCompileInputs.cache
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.exe
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.pdb
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.UI.Machine.resources
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\bin\Debug\EasyModbus.dll
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.csproj.CopyComplete
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.UI.Dashboard.resources
