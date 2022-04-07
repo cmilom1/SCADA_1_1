@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Hora = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MenuIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Menu = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.ConfiguracionesButton = new System.Windows.Forms.Button();
@@ -57,25 +61,26 @@
             this.Inyectora1Button = new System.Windows.Forms.Button();
             this.InyectorasStatusPilot = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.InyectorasButton = new System.Windows.Forms.Button();
             this.DatosOperativosButton = new System.Windows.Forms.Button();
             this.DashboardButton = new System.Windows.Forms.Button();
             this.Contenedor1 = new System.Windows.Forms.Panel();
-            this.InyectorasButton = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.MenuIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.HoraTimer = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.Menu.SuspendLayout();
-            this.subMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Menu.SuspendLayout();
+            this.subMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.Hora);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.MenuIcon);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -84,6 +89,53 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1350, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // Hora
+            // 
+            this.Hora.BackColor = System.Drawing.Color.White;
+            this.Hora.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Hora.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Hora.Font = new System.Drawing.Font("Bahnschrift", 11F);
+            this.Hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(105)))));
+            this.Hora.Location = new System.Drawing.Point(1207, 12);
+            this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
+            this.Hora.Size = new System.Drawing.Size(93, 18);
+            this.Hora.TabIndex = 19;
+            this.Hora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Hora.WordWrap = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SCADA_1_1.Properties.Resources.imagotipo;
+            this.pictureBox2.Location = new System.Drawing.Point(1307, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // MenuIcon
+            // 
+            this.MenuIcon.Image = global::SCADA_1_1.Properties.Resources.menu;
+            this.MenuIcon.Location = new System.Drawing.Point(5, 0);
+            this.MenuIcon.Name = "MenuIcon";
+            this.MenuIcon.Size = new System.Drawing.Size(40, 40);
+            this.MenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MenuIcon.TabIndex = 0;
+            this.MenuIcon.TabStop = false;
+            this.MenuIcon.Click += new System.EventHandler(this.MenuIcon_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SCADA_1_1.Properties.Resources.A;
+            this.pictureBox1.Location = new System.Drawing.Point(49, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Menu
             // 
@@ -124,6 +176,7 @@
             this.ConfiguracionesButton.Text = "     Configuraciones";
             this.ConfiguracionesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConfiguracionesButton.UseVisualStyleBackColor = true;
+            this.ConfiguracionesButton.Click += new System.EventHandler(this.ConfiguracionesButton_Click);
             // 
             // subMenu
             // 
@@ -399,6 +452,24 @@
             this.panel2.Size = new System.Drawing.Size(140, 1);
             this.panel2.TabIndex = 3;
             // 
+            // InyectorasButton
+            // 
+            this.InyectorasButton.FlatAppearance.BorderSize = 0;
+            this.InyectorasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.InyectorasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InyectorasButton.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
+            this.InyectorasButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.InyectorasButton.Image = global::SCADA_1_1.Properties.Resources.arrow;
+            this.InyectorasButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.InyectorasButton.Location = new System.Drawing.Point(-1, 94);
+            this.InyectorasButton.Name = "InyectorasButton";
+            this.InyectorasButton.Size = new System.Drawing.Size(194, 35);
+            this.InyectorasButton.TabIndex = 2;
+            this.InyectorasButton.Text = "     Inyectoras";
+            this.InyectorasButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InyectorasButton.UseVisualStyleBackColor = true;
+            this.InyectorasButton.Click += new System.EventHandler(this.InyectorasButton_Click);
+            // 
             // DatosOperativosButton
             // 
             this.DatosOperativosButton.FlatAppearance.BorderSize = 0;
@@ -413,6 +484,7 @@
             this.DatosOperativosButton.Text = "     Datos operativos";
             this.DatosOperativosButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DatosOperativosButton.UseVisualStyleBackColor = true;
+            this.DatosOperativosButton.Click += new System.EventHandler(this.DatosOperativosButton_Click);
             // 
             // DashboardButton
             // 
@@ -438,61 +510,31 @@
             this.Contenedor1.Size = new System.Drawing.Size(1156, 689);
             this.Contenedor1.TabIndex = 2;
             // 
-            // InyectorasButton
-            // 
-            this.InyectorasButton.FlatAppearance.BorderSize = 0;
-            this.InyectorasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.InyectorasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InyectorasButton.Font = new System.Drawing.Font("Bahnschrift", 11.25F);
-            this.InyectorasButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.InyectorasButton.Image = global::SCADA_1_1.Properties.Resources.arrow;
-            this.InyectorasButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.InyectorasButton.Location = new System.Drawing.Point(-1, 94);
-            this.InyectorasButton.Name = "InyectorasButton";
-            this.InyectorasButton.Size = new System.Drawing.Size(194, 35);
-            this.InyectorasButton.TabIndex = 2;
-            this.InyectorasButton.Text = "     Inyectoras";
-            this.InyectorasButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.InyectorasButton.UseVisualStyleBackColor = true;
-            this.InyectorasButton.Click += new System.EventHandler(this.InyectorasButton_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SCADA_1_1.Properties.Resources.imagotipo;
-            this.pictureBox2.Location = new System.Drawing.Point(1307, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // MenuIcon
-            // 
-            this.MenuIcon.Image = global::SCADA_1_1.Properties.Resources.menu;
-            this.MenuIcon.Location = new System.Drawing.Point(5, 0);
-            this.MenuIcon.Name = "MenuIcon";
-            this.MenuIcon.Size = new System.Drawing.Size(40, 40);
-            this.MenuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MenuIcon.TabIndex = 0;
-            this.MenuIcon.TabStop = false;
-            this.MenuIcon.Click += new System.EventHandler(this.MenuIcon_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SCADA_1_1.Properties.Resources.A;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(90, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // HoraTimer
+            // 
+            this.HoraTimer.Enabled = true;
+            this.HoraTimer.Tick += new System.EventHandler(this.HoraTimer_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 11F);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(105)))));
+            this.textBox1.Location = new System.Drawing.Point(962, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(239, 18);
+            this.textBox1.TabIndex = 20;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.WordWrap = false;
             // 
             // MainPanel
             // 
@@ -509,11 +551,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainPanel_Load);
             this.panel1.ResumeLayout(false);
-            this.Menu.ResumeLayout(false);
-            this.subMenu.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Menu.ResumeLayout(false);
+            this.subMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -555,6 +598,9 @@
         private System.Windows.Forms.Button ConfiguracionesButton;
         private System.Windows.Forms.Panel Contenedor1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox Hora;
+        private System.Windows.Forms.Timer HoraTimer;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

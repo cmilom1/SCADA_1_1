@@ -26,7 +26,7 @@ namespace SCADA_1_1.UI
 
         private async void timer1_Tick(object sender, EventArgs e)
         {
-           // Program.readDataMB = await Data.ComunicacionModbus.Start();
+
             textBox1.Text = Program.readDataMB[0].ToString();
             textBox2.Text = Program.readDataMB[1].ToString();
             textBox3.Text = Program.readDataMB[2].ToString();
@@ -34,6 +34,16 @@ namespace SCADA_1_1.UI
             textBox5.Text = Program.readDataMB[4].ToString();
             textBox6.Text = Program.readDataMB[5].ToString();
 
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
 
         }
     }

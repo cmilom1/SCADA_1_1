@@ -9,21 +9,46 @@ namespace SCADA_1_1.Data
 {
     public class ComunicacionModbus
     {
-        public static async Task<int[]> Start()
+
+        public static async Task<int[]> Start(int[] datosEnterosWrite)
         {
+            int counterFail = 0;
+            ModbusClient PLC = new ModbusClient(Program.PLCip, 502);
+            //int[] datosEnterosRead = new int[101];
             //parametros a inicializar
-            ModbusClient PLC = new ModbusClient("127.0.0.1", 502);
-            PLC.Connect();
-            //int[] datosEnteros = new int[10];
+
             await Task.Run(() =>
             {
                 //tarea a ejecutar
-                Program.readDataMB = PLC.ReadHoldingRegisters(1500, 50);
-                PLC.Disconnect();
+
+                try
+                {
+                    PLC.Connect();
+                }
+                catch
+                {
+                    counterFail = 100;
+                    Program.readDataMB[0] = -999;//control comunicacion
+                }
+
+                if (counterFail == 0)
+                {
+                    Program.readDataMB = PLC.ReadHoldingRegisters(1499, 51);
+
+                    PLC.WriteMultipleRegisters(1550, datosEnterosWrite); //escritura
+                    PLC.Disconnect();
+
+
+                }
 
             });
 
+
             return Program.readDataMB;
+
         }
+
+
     }
+
 }

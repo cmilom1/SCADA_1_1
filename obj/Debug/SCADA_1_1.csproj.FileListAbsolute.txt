@@ -13,3 +13,5 @@ C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.UI.Machine.re
 C:\Users\CamiloMartinez\source\repos\SCADA_1_1\bin\Debug\EasyModbus.dll
 C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.csproj.CopyComplete
 C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.UI.Dashboard.resources
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.UI.Configuraciones.resources
+C:\Users\CamiloMartinez\source\repos\SCADA_1_1\obj\Debug\SCADA_1_1.UI.OperationalData.resources

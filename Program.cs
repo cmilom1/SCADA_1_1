@@ -9,6 +9,8 @@ namespace SCADA_1_1
     internal static class Program
     {
         public static int[] readDataMB = new int[200];
+        public static string PLCip = "127.0.0.1";
+        public static string DBInstance;
 
         /// <summary>
         /// Punto de entrada principal para la aplicación.

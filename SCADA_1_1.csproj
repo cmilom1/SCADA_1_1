@@ -51,6 +51,13 @@
   <ItemGroup>
     <Compile Include="Data\DB_Connection.cs" />
     <Compile Include="Data\ComunicacionModbus.cs" />
+    <Compile Include="Data\MachinesData.cs" />
+    <Compile Include="UI\Configuraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Configuraciones.Designer.cs">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +70,12 @@
     <Compile Include="UI\Machine.Designer.cs">
       <DependentUpon>Machine.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\OperationalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OperationalData.Designer.cs">
+      <DependentUpon>OperationalData.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SCADA 1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +84,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\Configuraciones.resx">
+      <DependentUpon>Configuraciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Machine.resx">
       <DependentUpon>Machine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OperationalData.resx">
+      <DependentUpon>OperationalData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SCADA 1.resx">
       <DependentUpon>SCADA 1.cs</DependentUpon>
@@ -118,6 +137,8 @@
   <ItemGroup>
     <None Include="Resources\arrow.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Inyectora 3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

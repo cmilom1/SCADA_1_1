@@ -12,6 +12,7 @@ namespace SCADA_1_1
 {
     public partial class MainPanel : Form
     {
+        int[] escrituraEnteros = new int[50];
         public MainPanel()
         {
             InitializeComponent();
@@ -71,13 +72,31 @@ namespace SCADA_1_1
 
         private async void timer1_Tick(object sender, EventArgs e)
         {
-            Program.readDataMB = await Data.ComunicacionModbus.Start();
+            Program.readDataMB = await Data.ComunicacionModbus.Start(escrituraEnteros);
 
             if (Program.readDataMB[0] < 10) { 
                 InyectorasStatusPilot.BackColor = Color.FromArgb(255, 153, 153); }
             else
                 InyectorasStatusPilot.BackColor = Color.FromArgb(25, 247, 162);
 
+            if (Program.readDataMB[0] == -999) { textBox1.Text = "Sin conexión con el PLC Principal"; }
+            else { textBox1.Text = "PLC Principal OK"; }
+
+        }
+
+        private void HoraTimer_Tick(object sender, EventArgs e)
+        {
+            Hora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void ConfiguracionesButton_Click(object sender, EventArgs e)
+        {
+            openFormHijo(new UI.Configuraciones());
+        }
+
+        private void DatosOperativosButton_Click(object sender, EventArgs e)
+        {
+            openFormHijo(new UI.OperationalData());
         }
     }
 }
