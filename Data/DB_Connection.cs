@@ -10,8 +10,8 @@ namespace SCADA_1_1.Data
 {
     class DB_Connection
     {
-        static private string ConnectionString = "SERVER=TBOGL011\\SCSOLDINTEG;DATABASE=DB_SCADA_1_0; Integrated security=true";
-        private SqlConnection Conn = new SqlConnection(ConnectionString);
+        
+        private SqlConnection Conn = new SqlConnection("SERVER=TBOGL011\\SCSOLDINTEG;DATABASE=DB_SCADA_1_0; Integrated security=true");
 
         public SqlConnection ConnectionDB()
         {

@@ -33,7 +33,7 @@ namespace SCADA_1_1.Data
 
                 if (counterFail == 0)
                 {
-                    Program.readDataMB = PLC.ReadHoldingRegisters(1499, 51);
+                    Program.readDataMB = PLC.ReadHoldingRegisters(1498, 51);
 
                     PLC.WriteMultipleRegisters(1550, datosEnterosWrite); //escritura
                     PLC.Disconnect();

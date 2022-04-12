@@ -43,5 +43,6 @@ namespace SCADA_1_1.Data
             return Table;
             ;
         }
+
     }
 }

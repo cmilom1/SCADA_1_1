@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPanel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Hora = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MenuIcon = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,7 @@
             this.Contenedor1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.HoraTimer = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuIcon)).BeginInit();
@@ -89,6 +90,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1350, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 11F);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(105)))));
+            this.textBox1.Location = new System.Drawing.Point(962, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(239, 18);
+            this.textBox1.TabIndex = 20;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.WordWrap = false;
             // 
             // Hora
             // 
@@ -180,6 +196,7 @@
             // 
             // subMenu
             // 
+            this.subMenu.Controls.Add(this.panel3);
             this.subMenu.Controls.Add(this.Inyectora10StatusPilot);
             this.subMenu.Controls.Add(this.Inyectora9StatusPilot);
             this.subMenu.Controls.Add(this.Inyectora8StatusPilot);
@@ -372,7 +389,7 @@
             this.Inyectora5Button.Name = "Inyectora5Button";
             this.Inyectora5Button.Size = new System.Drawing.Size(173, 35);
             this.Inyectora5Button.TabIndex = 7;
-            this.Inyectora5Button.Text = "   Inyectora 5";
+            this.Inyectora5Button.Text = "   Inyectora 18";
             this.Inyectora5Button.UseVisualStyleBackColor = true;
             // 
             // Inyectora4Button
@@ -387,7 +404,7 @@
             this.Inyectora4Button.Name = "Inyectora4Button";
             this.Inyectora4Button.Size = new System.Drawing.Size(173, 35);
             this.Inyectora4Button.TabIndex = 6;
-            this.Inyectora4Button.Text = "   Inyectora 4";
+            this.Inyectora4Button.Text = "   Inyectora 17";
             this.Inyectora4Button.UseVisualStyleBackColor = true;
             // 
             // Inyectora3Button
@@ -402,7 +419,7 @@
             this.Inyectora3Button.Name = "Inyectora3Button";
             this.Inyectora3Button.Size = new System.Drawing.Size(173, 35);
             this.Inyectora3Button.TabIndex = 5;
-            this.Inyectora3Button.Text = "   Inyectora 3";
+            this.Inyectora3Button.Text = "   Inyectora 16";
             this.Inyectora3Button.UseVisualStyleBackColor = true;
             // 
             // Inyectora2Button
@@ -417,7 +434,7 @@
             this.Inyectora2Button.Name = "Inyectora2Button";
             this.Inyectora2Button.Size = new System.Drawing.Size(173, 35);
             this.Inyectora2Button.TabIndex = 4;
-            this.Inyectora2Button.Text = "   Inyectora 2";
+            this.Inyectora2Button.Text = "   Inyectora 15";
             this.Inyectora2Button.UseVisualStyleBackColor = true;
             // 
             // Inyectora1Button
@@ -432,7 +449,7 @@
             this.Inyectora1Button.Name = "Inyectora1Button";
             this.Inyectora1Button.Size = new System.Drawing.Size(173, 35);
             this.Inyectora1Button.TabIndex = 3;
-            this.Inyectora1Button.Text = "   Inyectora 1";
+            this.Inyectora1Button.Text = "   Inyectora 14";
             this.Inyectora1Button.UseVisualStyleBackColor = true;
             this.Inyectora1Button.Click += new System.EventHandler(this.Inyectora1Button_Click);
             // 
@@ -443,6 +460,7 @@
             this.InyectorasStatusPilot.Name = "InyectorasStatusPilot";
             this.InyectorasStatusPilot.Size = new System.Drawing.Size(10, 35);
             this.InyectorasStatusPilot.TabIndex = 4;
+            this.InyectorasStatusPilot.Paint += new System.Windows.Forms.PaintEventHandler(this.InyectorasStatusPilot_Paint);
             // 
             // panel2
             // 
@@ -521,20 +539,12 @@
             this.HoraTimer.Enabled = true;
             this.HoraTimer.Tick += new System.EventHandler(this.HoraTimer_Tick);
             // 
-            // textBox1
+            // panel3
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift", 11F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(104)))), ((int)(((byte)(105)))));
-            this.textBox1.Location = new System.Drawing.Point(962, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(239, 18);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.WordWrap = false;
+            this.panel3.Location = new System.Drawing.Point(0, 206);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(195, 199);
+            this.panel3.TabIndex = 3;
             // 
             // MainPanel
             // 
@@ -545,6 +555,7 @@
             this.Controls.Add(this.Contenedor1);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPanel";
             this.Text = "SCADA 1";
@@ -601,6 +612,7 @@
         private System.Windows.Forms.TextBox Hora;
         private System.Windows.Forms.Timer HoraTimer;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
